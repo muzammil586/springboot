@@ -1,0 +1,29 @@
+<html xmlns:th="www.thymeleaf.org">
+	
+	<body>
+		<h1>Student Records</h1>
+		<table width="500px" border="2">
+			<tr>
+				<th>Roll Number</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Address</th>
+				<th>Delete</th>
+				<th>Update</th>
+			</tr>
+			<tr th:each="s:${data}">
+				<td th:text="${s.rollno}"></td>
+				<td th:text="${s.name}"></td>
+				<td th:text="${s.age}"></td>
+				<td th:text="${s.address}"></td>
+				
+				<td><a th:href="@{'/delete/'+${s.rollno}}">Delete</a></td>
+				<td><a th:href="@{'/update/'+${s.rollno}}">Update</a></td>
+				
+			</tr>
+		</table>
+		<a th:href="@{/insert}">Insert Record</a>
+	</body>
+
+
+</html>
