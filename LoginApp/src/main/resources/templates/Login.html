@@ -1,0 +1,19 @@
+<html xmlns:th="www.thymeleaf.org">
+
+<body>
+	<br />
+	<div style="text-align: center; border: solid 2px red; width: 500px; margin-left: 250px; ">
+		<form th:method="post" th:action="@{/getall}" th:object="${data}">
+			User Name : <br />
+			<input type="text" th:field="*{username}" /><br />
+			Password : <br />
+			<input type="text" th:field="*{password}" /><br />
+			
+		    <input type="submit" value="Insert"/>
+		</form>
+
+	</div>
+</body>
+
+
+</html>
