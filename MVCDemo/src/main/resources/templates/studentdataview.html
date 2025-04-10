@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title> Student Data View</title>
+	</head>
+	<body>
+		<h1>Student Record</h1>
+		<hr/>
+		<div th:object="${student}">
+			Roll No : <span th:text="*{rollno}"/><br/>
+			Name : <span th:text="*{name}"/><br/>
+			Age : <span th:text="*{age}"/><br/>
+			Address : <span th:text="*{address}"/><br/>
+		</div>
+	</body>
+</html>
